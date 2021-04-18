@@ -1,0 +1,8 @@
+{
+  "name": "Kamasu trial app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue",
+  "id": "47992fa5"
+}
