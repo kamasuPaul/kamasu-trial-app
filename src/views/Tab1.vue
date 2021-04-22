@@ -1,25 +1,42 @@
 <template>
   <ion-page>
     <ion-header>
-      <ion-toolbar>
-        <ion-title>Tab 1</ion-title>
+      <ion-toolba slot="top">
+        <ion-buttons color="green" slot="start">
+          <ion-back-button>dd</ion-back-button>
+        </ion-buttons>
+        <ion-icon v-on:click="dd" name="ellipsis-vertical-outline"></ion-icon>
+        <ion-title>Home</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 1</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <ion-card>
+        <img src="../images/kamasu.jpeg" />
+        <ion-card-header>
+          <ion-card-subtitle>Destination</ion-card-subtitle>
+          <ion-card-title>Madison, WI</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
+          Madison was named the capital of the Wisconsin Territory in 1836.
+        </ion-card-content>
+      </ion-card>
 
       <ion-list>
         <ion-item :key="todo.id" v-for="todo in todos">
-          <ion-label>{{ todo.content }}</ion-label>
+          <ion-avatar slot="start">
+            <img src="../images/kamasu.jpeg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Finn</h2>
+            <h3>{{ todo.content }}</h3>
+            <p>Listen, I've had a pretty messed up day...</p>
+          </ion-label>
         </ion-item>
       </ion-list>
     </ion-content>
     <ion-footer>
-      <ion-toolbar >
+      <ion-toolbar>
         <ion-input placeholder="Enter item" v-model="todoText"></ion-input>
         <ion-button slot="end" v-on:click="addTodo">Add</ion-button>
       </ion-toolbar>
@@ -43,7 +60,7 @@ import {
 } from "@ionic/vue";
 
 export default {
-  name: "Tab1",
+  name: "Home",
   components: {
     IonHeader,
     IonToolbar,
@@ -64,18 +81,18 @@ export default {
         { id: 2, content: "Buy Christmas gifts" },
         { id: 3, content: "Spellcheck my draft" },
       ],
-      todoText:""
+      todoText: "",
     };
   },
-  methods:{
-    addTodo(){
-      if(this.todoText == "") return;
+  methods: {
+    addTodo() {
+      if (this.todoText == "") return;
       this.todos.push({
         id: this.todos.length,
-        content: this.todoText
-      })
-      this.todoText = ""
-    }
-  }
+        content: this.todoText,
+      });
+      this.todoText = "";
+    },
+  },
 };
 </script>
