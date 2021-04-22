@@ -28,6 +28,11 @@ const routes/*: Array<RouteRecordRaw>*/ = [
         component: () => import('@/views/Tab3.vue')
       }
     ]
+  },
+  {
+    path: '/',
+    name:"Settings",
+    component: () => import('@/views/Settings.vue')
   }
 ]
 
