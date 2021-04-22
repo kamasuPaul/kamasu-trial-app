@@ -1,7 +1,7 @@
 <template>
   <ion-page>
     <ion-header>
-      <ion-toolba slot="top">
+      <ion-toolbar slot="top">
         <ion-buttons color="green" slot="start">
           <ion-back-button>dd</ion-back-button>
         </ion-buttons>
