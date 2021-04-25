@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "Kamasu trial app",
+  "appId": "com.softappsuganda.ionfirstapp",
+  "appName": "MyIonicApp",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "dist",
